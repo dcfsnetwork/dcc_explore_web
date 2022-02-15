@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@img/*": [
+        "./assets/imgs/*"
+      ],
+      "@c/*": [
+        "./components/*"
+      ],
+      "@v/*": [
+        "./views/*"
+      ],
+      "@config/*": [
+        "./config/*"
+      ],
+      "@context/*": [
+        "./context/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@mixin": [
+        "./mixin.scss"
+      ]
+    }
+  }
+}

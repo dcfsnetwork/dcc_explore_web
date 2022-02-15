@@ -1,0 +1,211 @@
+@import '@mixin';
+
+.cardBox {
+  display: flex;
+  justify-content: space-between;
+  > :first-child {
+    width: 63%;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 960px) {
+    display: block;
+  }
+}
+
+.echart {
+  @media (max-width: 960px) {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 70px;
+  }
+  height: 280px;
+  width: 33%;
+  padding-bottom: 10px;
+  margin-top: 60px;
+  background-color: #fff;
+  box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  border-radius: 15px;
+  > :first-child {
+    margin: 20px 0 0 20px;
+    @media (max-width: 960px) {
+      position: relative;
+      top: 5px;
+    }
+  }
+  > :last-child {
+    width: 100%;
+    height: 100%;
+  }
+}
+.search_box {
+  width: 50%;
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+}
+.subBox1,
+.subBox2 {
+  @media (max-width: 960px) {
+    display: block;
+    @include w-h(100%);
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  margin-top: 60px;
+  box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  z-index: 9990 !important;
+  @include w-h(auto);
+  max-height: 140px;
+  background-color: #fff;
+  padding: 35px;
+  @include flex(space-between);
+  > :nth-child(2) {
+    width: 1px;
+    height: 100px;
+    background-color: #f8f8f8;
+    margin: 0 50px;
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+  > :first-child,
+  > :last-child {
+    @media (max-width: 960px) {
+      padding: 15px 20px;
+      background-color: #fff;
+      box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+      border-radius: 5px;
+      margin-top: 10px;
+      // display: block;
+      width: 100%;
+    }
+    // padding: 0 30px;
+    @include w-h(50%);
+    @include flex(space-between);
+    > :nth-child(2) {
+      margin-right: auto;
+    }
+  }
+  > :first-child {
+    @media (max-width: 960px) {
+      margin-top: 70px;
+      width: 100%;
+    }
+  }
+  > :last-child {
+    span {
+      line-height: 35px;
+      div {
+        a {
+          color: #000;
+          &:hover {
+            color: #00c299;
+          }
+        }
+      }
+    }
+  }
+  img {
+    margin-right: 20px;
+    width: 63px;
+    @media (max-width: 960px) {
+      width: 50px;
+    }
+  }
+}
+.subBox1 {
+  border-radius: 15px 15px 0 0;
+  @media (max-width: 960px) {
+    border-radius: 5px;
+  }
+}
+.subBox2 {
+  margin-top: 0;
+  border-radius: 0 0 15px 15px;
+  @media (max-width: 960px) {
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
+.card {
+  margin-top: 40px;
+  margin-bottom: 55px;
+  @include flex(space-between);
+  @media (max-width: 960px) {
+    display: block;
+  }
+  .txs {
+    margin-top: 0;
+  }
+  > div {
+    @media (max-width: 960px) {
+      margin-top: 20px;
+      @include w-h(100%);
+      border-radius: 5px;
+      padding-bottom: 10px;
+    }
+    @include w-h(48%);
+    background-color: #fff;
+    box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+    // min-height: 610px;
+    border-radius: 15px;
+    > div {
+      padding: 20px;
+      border-bottom: 1px solid #f5f6fa;
+    }
+    > :first-child {
+      border-bottom: 1px solid #f5f6fa;
+    }
+    > :last-child {
+      div {
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 0;
+        margin: 20px;
+        border-top: 1px solid #f5f6fa;
+        background-color: #f5f6fa;
+        line-height: 44px;
+        height: 44px;
+        text-align: center;
+        color: $PRIMARY_C;
+        @media (max-width: 960px) {
+          margin: 10px 10px 0 10px;
+          border-radius: 5px;
+        }
+        &:hover {
+          color: #fff;
+          background-color: $PRIMARY_C;
+        }
+      }
+    }
+  }
+  .list {
+    max-height: 300px;
+    overflow-y: auto;
+
+    > :first-child {
+      border-top: 1px solid #f5f6fa;
+    }
+    .listItem {
+      padding: 10px 0;
+      border-bottom: 1px solid #f5f6fa;
+      display: flex;
+      align-items: center;
+      > :first-child {
+        user-select: none;
+      }
+      > :nth-child(2) {
+        margin-left: 20px;
+        width: 20%;
+      }
+      > :nth-child(3) {
+        width: 35%;
+        margin-right: auto;
+      }
+    }
+  }
+}

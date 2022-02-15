@@ -1,0 +1,55 @@
+@import '@mixin';
+
+$LIGHTER_COLOR: #00ffc8;
+$LIGHT_COLOR: #00ddad;
+$BOLD_COLOR: #00c99d;
+$LOADING_WRAP_W: 60px;
+$LOADING_WRAP_H: 20px;
+$LOADING_W: 6px;
+
+.loading-wrap {
+  @include w-h(100vw, calc(100vh - #{$HEADER_H}));
+  @include flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0 !important;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+  .loading {
+    @include w-h($LOADING_WRAP_W, $LOADING_WRAP_H);
+    @include flex(space-between);
+    span {
+      @include w-h($LOADING_W, 100%);
+      display: inline-block;
+      border-radius: 4px;
+      background: linear-gradient(to right, $LIGHTER_COLOR, $LIGHT_COLOR);
+      animation: load 0.5s ease infinite;
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+    }
+    @keyframes load {
+      0%,
+      100% {
+        height: $LOADING_WRAP_H;
+        background: linear-gradient(to right, $LIGHTER_COLOR, $LIGHT_COLOR);
+      }
+      50% {
+        height: calc(#{$LOADING_WRAP_H} * 2);
+        margin: -calc(#{$LOADING_WRAP_H} / 2) 0;
+        background: linear-gradient(to right, $LIGHT_COLOR, $BOLD_COLOR);
+      }
+    }
+  }
+}

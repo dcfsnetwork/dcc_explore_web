@@ -1,0 +1,41 @@
+@import '@mixin';
+.box {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  > :first-child {
+    padding-left: 15px;
+    width: 100%;
+    span {
+      @media (max-width: 960px) {
+        word-break: break-word;
+      }
+    }
+  }
+  .table {
+    background-color: #fafafa;
+    box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+    border-radius: 15px;
+    @media (max-width: 960px) {
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    > div {
+      width: 95%;
+
+      margin: 0 auto;
+    }
+    > :first-child {
+      padding: 20px 0 20px 0;
+      font-size: 19px;
+      @media (max-width: 960px) {
+        margin-left: 5%;
+      }
+    }
+    > :nth-child(2) {
+      @media (max-width: 960px) {
+        width: 960px;
+      }
+    }
+  }
+}

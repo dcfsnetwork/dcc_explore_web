@@ -1,0 +1,139 @@
+.font-24 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.font-22 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.font-20 {
+  font-size: 20px;
+  line-height: 35px;
+}
+.font-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.font-16 {
+  font-size: 16px;
+  line-height: 25px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-10 {
+  font-size: 10px;
+}
+.font-6 {
+  font-size: 6px;
+}
+.g-c {
+  color: #00c299;
+}
+.l-c {
+  color: #747483;
+}
+
+.d-title {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.bg-green {
+  background-color: #e9f4f0;
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.bg-gray {
+  color: #747483;
+  float: right;
+  background-color: #f5f6fa;
+  padding: 5px 12px;
+  border-radius: 15px 0 0 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  user-select: none;
+}
+
+.ant-input-group .ant-input-group-addon {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 0;
+}
+// table分页
+.ant-pagination-next,
+.ant-pagination-disabled {
+  margin-right: 15px;
+}
+
+.ant-input-lg {
+  @media (max-width: 960px) {
+    font-size: 1em;
+  }
+}
+
+.ant-pagination-options {
+  margin-right: 15px;
+}
+// form间距
+.ant-form-item {
+  margin-bottom: 24px !important;
+}
+
+.search_box {
+  display: none;
+  @media (max-width: 960px) {
+    display: block;
+  }
+}
+
+// 滚动条不显示
+// ::-webkit-scrollbar {
+//   width: 0;
+// }
+
+::-webkit-scrollbar {
+  @media (max-width: 960px) {
+    display: none;
+  }
+}
+
+.scroll_container {
+  overflow: hidden;
+}
+.scroll_container:hover {
+  overflow: scroll;
+}
+
+// .main-box-wrap {
+//   height: calc(100vh - 17.7083vw);
+//   overflow-y: auto;
+// }
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background-color: #00c29848;
+}
+
+/*滚动条中间滑动部分*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #75d3bf;
+}
+
+// .main-box-wrap:hover::-webkit-scrollbar-thumb {
+//   background: rgba(144, 147, 153, 0.3);
+// }

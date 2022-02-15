@@ -1,0 +1,9 @@
+.search {
+  width: 100%;
+  > :first-child {
+    width: 100%;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
+  }
+}

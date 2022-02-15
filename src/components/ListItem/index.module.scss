@@ -1,0 +1,14 @@
+.listItem {
+  display: flex;
+  border-top: 1px solid #e7e7e7;
+  @media (max-width: 960px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  div {
+    margin: 16px 0 16px 0;
+  }
+  > :first-child {
+    width: 20%;
+  }
+}

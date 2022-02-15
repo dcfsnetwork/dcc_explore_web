@@ -1,0 +1,49 @@
+@import '@mixin';
+
+.contact {
+  @include w-h(60%);
+  margin: 0 auto;
+  @media (max-width: 960px) {
+    @include w-h(100%);
+  }
+  > :first-child {
+    > :first-child {
+      > :first-child {
+        width: 45%;
+        white-space: nowrap;
+        @media (max-width: 960px) {
+          @include w-h(100%);
+          white-space: normal;
+        }
+      }
+    }
+    > :nth-child(2) {
+      @include flex(space-between);
+      > :nth-child(1),
+      > :nth-child(2) {
+        width: 45%;
+        @media (max-width: 960px) {
+          width: 100%;
+        }
+      }
+      @media (max-width: 960px) {
+        display: block;
+      }
+    }
+  }
+
+  :global {
+    .ant-form-item-explain.ant-form-item-explain-connected {
+      font-size: 14px;
+      font-weight: normal;
+      color: #747483;
+      line-height: 23px;
+      margin-top: 8px;
+    }
+    textarea::placeholder {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 26px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '@mixin';
+
+.bg {
+  @media (max-width: 960px) {
+    min-height: calc(100vh);
+    background: url(../../assets/bg_m.png) top / contain no-repeat;
+  }
+  background-color: #fbfcff;
+  font-weight: 500;
+  min-height: calc(100vh - #{$FOOTER_H});
+  z-index: 0;
+  background: url(../../assets/bg.png) top / contain no-repeat;
+  background-position-y: 68px;
+  .content {
+    @include content-container;
+    @media (max-width: 960px) {
+      display: block;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    > :first-child {
+      margin-bottom: 20px;
+    }
+  }
+}

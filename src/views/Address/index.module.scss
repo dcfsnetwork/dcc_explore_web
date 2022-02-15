@@ -1,0 +1,107 @@
+.center {
+  width: 50%;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0 40px;
+  margin-top: 20px;
+  box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  @media (max-width: 960px) {
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+  }
+  > :first-child,
+  > :nth-child(2) {
+    border-bottom: 1px solid #7474832c;
+  }
+  > :last-child {
+    width: 100%;
+    display: flex;
+    > div {
+      width: 100%;
+      margin: auto;
+      > :first-child {
+        cursor: pointer;
+        > :first-child {
+          background-color: #f5f6fa;
+          margin-left: 3%;
+        }
+        > :last-child {
+          margin-right: 3%;
+        }
+        background-color: #f5f6fa;
+        width: 80%;
+        line-height: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0 auto 3%;
+      }
+    }
+  }
+  > div {
+    height: 50%;
+    line-height: 80px;
+    @media (max-width: 960px) {
+      line-height: 60px;
+    }
+  }
+}
+.list_box {
+  @media (max-width: 960px) {
+    overflow-x: auto;
+    box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  }
+}
+.list {
+  @media (max-width: 960px) {
+    width: 1080px;
+  }
+  > :first-child,
+  > :nth-child(2) {
+    background-color: #fff;
+    padding: 15px;
+    position: relative;
+    top: 35px;
+    box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  }
+  > :nth-child(2) {
+    padding-bottom: 20px;
+  }
+  > :first-child {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(88, 97, 106, 0.1);
+    border-radius: 15px 15px 0 0;
+    @media (max-width: 960px) {
+      box-shadow: none;
+      border-radius: 5px;
+      top: 0;
+    }
+  }
+}
+.top {
+  > :nth-child(2) {
+    display: none;
+    @media (max-width: 960px) {
+      display: block;
+      img {
+        width: 20px;
+      }
+      > :nth-child(2) {
+        font-size: 1.15em;
+      }
+      > :nth-child(3) {
+        font-size: 0.7em;
+      }
+    }
+  }
+  > :first-child {
+    display: block;
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+}

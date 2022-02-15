@@ -1,0 +1,56 @@
+@import '@mixin';
+.box {
+  margin: 0 auto;
+  max-width: 1100px;
+  > :first-child {
+    padding-left: 15px;
+    span {
+      @media (max-width: 960px) {
+        word-break: break-word;
+      }
+    }
+  }
+  .table {
+    background-color: #fafafa;
+    box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+    border-radius: 15px;
+    @media (max-width: 960px) {
+      overflow-x: auto;
+    }
+    > div {
+      width: 95%;
+      @media (max-width: 960px) {
+        margin-left: 5%;
+      }
+      margin: 0 auto;
+    }
+    > :first-child {
+      padding: 20px 0 20px 0;
+      font-size: 19px;
+    }
+
+    .item {
+      display: flex;
+      border-top: 1px solid #e7e7e7;
+      @media (max-width: 960px) {
+        width: 750px;
+        margin: 0 auto;
+      }
+      div {
+        margin: 8px 0 8px 0;
+      }
+      > :first-child {
+        width: 20%;
+        @media (max-width: 960px) {
+          margin-left: 2.5%;
+        }
+      }
+      > :nth-child(2) {
+        width: auto;
+        > :nth-child(1) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

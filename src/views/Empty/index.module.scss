@@ -1,0 +1,30 @@
+@import '@mixin';
+
+.empty {
+  text-align: center;
+  box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 25px 0 50px 0;
+  > :first-child {
+    font-size: 28px;
+  }
+  > :last-child {
+    a {
+      color: #fff;
+      padding: 5px 15px;
+      width: fit-content;
+      background-color: #00c299;
+      cursor: pointer;
+      border-radius: 5px;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  img {
+    @media (max-width: 960px) {
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '@mixin';
+
+.box {
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 3px 13px 0 rgba(88, 97, 106, 0.1);
+  @media (max-width: 960px) {
+    overflow-x: auto;
+    border-radius: 5px;
+  }
+  > div {
+    @media (max-width: 960px) {
+      width: 1080px;
+    }
+  }
+  overflow: hidden;
+  > :last-child {
+    background-color: #fff;
+  }
+  .toprow {
+    width: fit-content !important;
+    z-index: 100;
+  }
+  .toprow,
+  .bg {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 15px 0 0 15px;
+    position: absolute;
+    border-radius: 15px 15px 0 0;
+  }
+}

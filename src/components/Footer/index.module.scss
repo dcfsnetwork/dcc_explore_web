@@ -1,0 +1,99 @@
+@import '@mixin';
+
+.footer {
+  @include w-h(100%, $FOOTER_H);
+  background-color: $BOTTIOM_C;
+  color: #fff;
+  .content {
+    @include flex(space-between);
+    max-width: 1160px;
+    height: 100%;
+    margin: auto;
+    font-size: 12px;
+    color: #fff;
+    > div {
+      @include w-h(50%);
+      @include flex(flex-end, flex-start, column);
+      padding: 30px 6%;
+    }
+    .left_content {
+      .left_content_title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        @media (max-width: 960px) {
+          white-space: nowrap;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+      .add_btn {
+        @include w-h(150px, 24px);
+        @include flex;
+        line-height: 24px;
+        transition: background-color 0.3s;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin-top: 34px;
+        cursor: pointer;
+        > :nth-child(2) {
+          @media screen {
+            white-space: nowrap;
+          }
+        }
+
+        &:hover {
+          transition-duration: 0s;
+          color: black;
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+    > :nth-child(2) {
+      display: none;
+      // @media (max-width: 960px) {
+      //   display: block;
+      //   opacity: 0.5;
+      //   width: 0.5px;
+      //   height: 60%;
+      //   margin: 0;
+      //   padding: 0;
+      //   background-color: rgba(255, 255, 255, 0.5);
+      // }
+    }
+    .right_content {
+      .contact_btn {
+        white-space: nowrap;
+        @include w-h(88px, 24px);
+        @include flex;
+        line-height: 24px;
+        color: #00c299;
+        background-color: #fff;
+        margin-top: 34px;
+        cursor: pointer;
+        a {
+          padding: 0;
+          margin: 0;
+          height: fit-content;
+        }
+        &:hover {
+          opacity: 0.8;
+          @media (max-width: 960px) {
+            opacity: 1;
+          }
+        }
+      }
+      > :last-child {
+        display: flex;
+        @media (max-width: 960px) {
+          display: block;
+        }
+        > :nth-child(2) {
+          margin-left: 15px;
+          @media (max-width: 960px) {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

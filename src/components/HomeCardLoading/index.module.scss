@@ -1,0 +1,28 @@
+@import '@mixin';
+
+.loading {
+  @include flex(space-between);
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f6fa;
+  display: flex;
+  align-items: center;
+  > :first-child {
+    width: 44px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  > :nth-child(2) {
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 20%;
+  }
+  > :nth-child(3) {
+    padding-top: 4px;
+    width: 35%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
